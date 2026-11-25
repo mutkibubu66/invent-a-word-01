@@ -15,7 +15,12 @@ The program writes the entry — one line, no trailing newline — to
 
 import os
 
+# The competition gate: /output/entry.txt must hold 1 to 140 characters.
+MAX_ENTRY_CHARS = 140
+
 ENTRY = 'finepause (n.) \u2014 the pause before you say "I\'m fine" when you\'re not.'
+
+assert 1 <= len(ENTRY) <= MAX_ENTRY_CHARS, "entry must be 1-140 characters"
 
 
 def main() -> None:
